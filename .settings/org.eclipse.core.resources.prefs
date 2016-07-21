@@ -1,4 +1,5 @@
 eclipse.preferences.version=1
+encoding//blanco/main/blanco/plugin/sqleditor/resourcebundle/BlancoSqlEditorPluginResourceBundle.java=UTF-8
 encoding//src/blanco/plugin/sqleditor/BlancoSqlEditorPlugin.java=UTF-8
 encoding//src/blanco/plugin/sqleditor/editors/BlancoSQLRule.java=UTF-8
 encoding//src/blanco/plugin/sqleditor/editors/BlancoSqlEditor.java=UTF-8
