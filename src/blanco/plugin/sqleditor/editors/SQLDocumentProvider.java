@@ -13,7 +13,7 @@ package blanco.plugin.sqleditor.editors;
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.jface.text.IDocument;
 import org.eclipse.jface.text.IDocumentPartitioner;
-import org.eclipse.jface.text.rules.DefaultPartitioner;
+import org.eclipse.jface.text.rules.FastPartitioner;
 import org.eclipse.ui.editors.text.FileDocumentProvider;
 
 /**
@@ -27,12 +27,7 @@ public class SQLDocumentProvider extends FileDocumentProvider {
 	protected IDocument createDocument(Object element) throws CoreException {
 		IDocument document = super.createDocument(element);
 		if (document != null) {
-			/**
-			 * Eclipse 3.0との互換性を取るために DefaultPartitioner を利用せざるを得ません。
-			 * 
-			 * TODO you can upgrade class because we drop Eclipse 3.0 support.
-			 */
-			IDocumentPartitioner partitioner = new DefaultPartitioner(new SQLPartitionScanner(),
+			IDocumentPartitioner partitioner = new FastPartitioner(new SQLPartitionScanner(),
 					new String[] { SQLPartitionScanner.SQL89, SQLPartitionScanner.SQL92, SQLPartitionScanner.SQL99,
 							SQLPartitionScanner.SQL_FAMOUS, SQLPartitionScanner.SQL_COMMENT });
 			partitioner.connect(document);
