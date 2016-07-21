@@ -1,6 +1,6 @@
 /*
- * ‚±‚Ìƒ\[ƒXƒR[ƒh‚Í blanco Framework‚É‚æ‚Á‚Ä©“®¶¬‚³‚ê‚Ä‚¢‚Ü‚·B
- * ƒŠƒ\[ƒXƒoƒ“ƒhƒ‹’è‹`‘‚©‚çì¬‚³‚ê‚½ƒŠƒ\[ƒXƒoƒ“ƒhƒ‹ƒNƒ‰ƒXB
+ * ã“ã®ã‚½ãƒ¼ã‚¹ã‚³ãƒ¼ãƒ‰ã¯ blanco Frameworkã«ã‚ˆã£ã¦è‡ªå‹•ç”Ÿæˆã•ã‚Œã¦ã„ã¾ã™ã€‚
+ * ãƒªã‚½ãƒ¼ã‚¹ãƒãƒ³ãƒ‰ãƒ«å®šç¾©æ›¸ã‹ã‚‰ä½œæˆã•ã‚ŒãŸãƒªã‚½ãƒ¼ã‚¹ãƒãƒ³ãƒ‰ãƒ«ã‚¯ãƒ©ã‚¹ã€‚
  */
 package blanco.plugin.sqleditor.resourcebundle;
 
@@ -9,10 +9,10 @@ import java.util.MissingResourceException;
 import java.util.ResourceBundle;
 
 /**
- * ƒŠƒ\[ƒXƒoƒ“ƒhƒ‹’è‹`[BlancoSqlEditorPlugin]‚ÌƒŠƒ\[ƒXƒoƒ“ƒhƒ‹ƒNƒ‰ƒXB
+ * ãƒªã‚½ãƒ¼ã‚¹ãƒãƒ³ãƒ‰ãƒ«å®šç¾©[BlancoSqlEditorPlugin]ã®ãƒªã‚½ãƒ¼ã‚¹ãƒãƒ³ãƒ‰ãƒ«ã‚¯ãƒ©ã‚¹ã€‚
  *
- * ‚±‚ÌƒNƒ‰ƒX‚ÍƒŠƒ\[ƒXƒoƒ“ƒhƒ‹’è‹`‘‚©‚ç©“®¶¬‚³‚ê‚½ƒŠƒ\[ƒXƒoƒ“ƒhƒ‹ƒNƒ‰ƒX‚Å‚·B<BR>
- * Šù’m‚ÌƒƒP[ƒ‹<BR>
+ * ã“ã®ã‚¯ãƒ©ã‚¹ã¯ãƒªã‚½ãƒ¼ã‚¹ãƒãƒ³ãƒ‰ãƒ«å®šç¾©æ›¸ã‹ã‚‰è‡ªå‹•ç”Ÿæˆã•ã‚ŒãŸãƒªã‚½ãƒ¼ã‚¹ãƒãƒ³ãƒ‰ãƒ«ã‚¯ãƒ©ã‚¹ã§ã™ã€‚<BR>
+ * æ—¢çŸ¥ã®ãƒ­ã‚±ãƒ¼ãƒ«<BR>
  * <UL>
  * <LI>en
  * <LI>ja
@@ -20,16 +20,16 @@ import java.util.ResourceBundle;
  */
 public class BlancoSqlEditorPluginResourceBundle {
     /**
-     * ƒŠƒ\[ƒXƒoƒ“ƒhƒ‹ƒIƒuƒWƒFƒNƒgB
+     * ãƒªã‚½ãƒ¼ã‚¹ãƒãƒ³ãƒ‰ãƒ«ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã€‚
      *
-     * “à•”“I‚ÉÀÛ‚É“ü—Í‚ğs‚¤ƒŠƒ\[ƒXƒoƒ“ƒhƒ‹‚ğ‹L‰¯‚µ‚Ü‚·B
+     * å†…éƒ¨çš„ã«å®Ÿéš›ã«å…¥åŠ›ã‚’è¡Œã†ãƒªã‚½ãƒ¼ã‚¹ãƒãƒ³ãƒ‰ãƒ«ã‚’è¨˜æ†¶ã—ã¾ã™ã€‚
      */
     private ResourceBundle fResourceBundle;
 
     /**
-     * BlancoSqlEditorPluginResourceBundleƒNƒ‰ƒX‚ÌƒRƒ“ƒXƒgƒ‰ƒNƒ^B
+     * BlancoSqlEditorPluginResourceBundleã‚¯ãƒ©ã‚¹ã®ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿ã€‚
      *
-     * Šî’ê–¼[BlancoSqlEditorPlugin]AƒfƒtƒHƒ‹ƒg‚ÌƒƒP[ƒ‹AŒÄ‚Ño‚µ‘¤‚ÌƒNƒ‰ƒXƒ[ƒ_‚ğg—p‚µ‚ÄAƒŠƒ\[ƒXƒoƒ“ƒhƒ‹‚ğæ“¾‚µ‚Ü‚·B
+     * åŸºåº•å[BlancoSqlEditorPlugin]ã€ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆã®ãƒ­ã‚±ãƒ¼ãƒ«ã€å‘¼ã³å‡ºã—å´ã®ã‚¯ãƒ©ã‚¹ãƒ­ãƒ¼ãƒ€ã‚’ä½¿ç”¨ã—ã¦ã€ãƒªã‚½ãƒ¼ã‚¹ãƒãƒ³ãƒ‰ãƒ«ã‚’å–å¾—ã—ã¾ã™ã€‚
      */
     public BlancoSqlEditorPluginResourceBundle() {
         try {
@@ -39,11 +39,11 @@ public class BlancoSqlEditorPluginResourceBundle {
     }
 
     /**
-     * BlancoSqlEditorPluginResourceBundleƒNƒ‰ƒX‚ÌƒRƒ“ƒXƒgƒ‰ƒNƒ^B
+     * BlancoSqlEditorPluginResourceBundleã‚¯ãƒ©ã‚¹ã®ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿ã€‚
      *
-     * Šî’ê–¼[BlancoSqlEditorPlugin]Aw’è‚³‚ê‚½ƒƒP[ƒ‹AŒÄ‚Ño‚µ‘¤‚ÌƒNƒ‰ƒXƒ[ƒ_‚ğg—p‚µ‚ÄAƒŠƒ\[ƒXƒoƒ“ƒhƒ‹‚ğæ“¾‚µ‚Ü‚·B
+     * åŸºåº•å[BlancoSqlEditorPlugin]ã€æŒ‡å®šã•ã‚ŒãŸãƒ­ã‚±ãƒ¼ãƒ«ã€å‘¼ã³å‡ºã—å´ã®ã‚¯ãƒ©ã‚¹ãƒ­ãƒ¼ãƒ€ã‚’ä½¿ç”¨ã—ã¦ã€ãƒªã‚½ãƒ¼ã‚¹ãƒãƒ³ãƒ‰ãƒ«ã‚’å–å¾—ã—ã¾ã™ã€‚
      *
-     * @param locale ƒƒP[ƒ‹‚Ìw’è
+     * @param locale ãƒ­ã‚±ãƒ¼ãƒ«ã®æŒ‡å®š
      */
     public BlancoSqlEditorPluginResourceBundle(final Locale locale) {
         try {
@@ -53,12 +53,12 @@ public class BlancoSqlEditorPluginResourceBundle {
     }
 
     /**
-     * BlancoSqlEditorPluginResourceBundleƒNƒ‰ƒX‚ÌƒRƒ“ƒXƒgƒ‰ƒNƒ^B
+     * BlancoSqlEditorPluginResourceBundleã‚¯ãƒ©ã‚¹ã®ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿ã€‚
      *
-     * Šî’ê–¼[BlancoSqlEditorPlugin]Aw’è‚³‚ê‚½ƒƒP[ƒ‹Aw’è‚³‚ê‚½ƒNƒ‰ƒXƒ[ƒ_‚ğg—p‚µ‚ÄAƒŠƒ\[ƒXƒoƒ“ƒhƒ‹‚ğæ“¾‚µ‚Ü‚·B
+     * åŸºåº•å[BlancoSqlEditorPlugin]ã€æŒ‡å®šã•ã‚ŒãŸãƒ­ã‚±ãƒ¼ãƒ«ã€æŒ‡å®šã•ã‚ŒãŸã‚¯ãƒ©ã‚¹ãƒ­ãƒ¼ãƒ€ã‚’ä½¿ç”¨ã—ã¦ã€ãƒªã‚½ãƒ¼ã‚¹ãƒãƒ³ãƒ‰ãƒ«ã‚’å–å¾—ã—ã¾ã™ã€‚
      *
-     * @param locale ƒƒP[ƒ‹‚Ìw’è
-     * @param loader ƒNƒ‰ƒXƒ[ƒ_‚Ìw’è
+     * @param locale ãƒ­ã‚±ãƒ¼ãƒ«ã®æŒ‡å®š
+     * @param loader ã‚¯ãƒ©ã‚¹ãƒ­ãƒ¼ãƒ€ã®æŒ‡å®š
      */
     public BlancoSqlEditorPluginResourceBundle(final Locale locale, final ClassLoader loader) {
         try {
@@ -68,9 +68,9 @@ public class BlancoSqlEditorPluginResourceBundle {
     }
 
     /**
-     * “à•”“I‚É•Û‚µ‚Ä‚¢‚éƒŠƒ\[ƒXƒoƒ“ƒhƒ‹ƒIƒuƒWƒFƒNƒg‚ğæ“¾‚µ‚Ü‚·B
+     * å†…éƒ¨çš„ã«ä¿æŒã—ã¦ã„ã‚‹ãƒªã‚½ãƒ¼ã‚¹ãƒãƒ³ãƒ‰ãƒ«ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚’å–å¾—ã—ã¾ã™ã€‚
      *
-     * @return “à•”“I‚É•Û‚µ‚Ä‚¢‚éƒŠƒ\[ƒXƒoƒ“ƒhƒ‹ƒIƒuƒWƒFƒNƒgB
+     * @return å†…éƒ¨çš„ã«ä¿æŒã—ã¦ã„ã‚‹ãƒªã‚½ãƒ¼ã‚¹ãƒãƒ³ãƒ‰ãƒ«ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã€‚
      */
     public ResourceBundle getResourceBundle() {
         return fResourceBundle;
@@ -82,10 +82,10 @@ public class BlancoSqlEditorPluginResourceBundle {
      * [&amp;SQL] (en)<br>
      * [SQL(&amp;S)] (ja)<br>
      *
-     * @return key[MENU0001]‚É‘Î‰‚·‚é’lBŠO•”‚©‚ç“Ç‚İ‚İ‚ª‚Å‚«‚È‚¢ê‡‚É‚ÍA’è‹`‘‚Ì’l‚ğ–ß‚µ‚Ü‚·B•K‚¸nullˆÈŠO‚Ì’l‚ª–ß‚è‚Ü‚·B
+     * @return key[MENU0001]ã«å¯¾å¿œã™ã‚‹å€¤ã€‚å¤–éƒ¨ã‹ã‚‰èª­ã¿è¾¼ã¿ãŒã§ããªã„å ´åˆã«ã¯ã€å®šç¾©æ›¸ã®å€¤ã‚’æˆ»ã—ã¾ã™ã€‚å¿…ãšnullä»¥å¤–ã®å€¤ãŒæˆ»ã‚Šã¾ã™ã€‚
      */
     public String getMenu0001() {
-        // ‰Šú’l‚Æ‚µ‚Ä’è‹`‘‚Ì’l‚ğ—˜—p‚µ‚Ü‚·B
+        // åˆæœŸå€¤ã¨ã—ã¦å®šç¾©æ›¸ã®å€¤ã‚’åˆ©ç”¨ã—ã¾ã™ã€‚
         String strFormat = "&SQL";
         try {
             if (fResourceBundle != null) {
@@ -93,7 +93,7 @@ public class BlancoSqlEditorPluginResourceBundle {
             }
         } catch (MissingResourceException ex) {
         }
-        // ’uŠ·•¶š—ñ‚Í‚Ğ‚Æ‚Â‚à‚ ‚è‚Ü‚¹‚ñB
+        // ç½®æ›æ–‡å­—åˆ—ã¯ã²ã¨ã¤ã‚‚ã‚ã‚Šã¾ã›ã‚“ã€‚
         return strFormat;
     }
 
@@ -101,12 +101,12 @@ public class BlancoSqlEditorPluginResourceBundle {
      * bundle[BlancoSqlEditorPlugin], key[MENU0002]
      *
      * [F&amp;ormat] (en)<br>
-     * [ƒtƒH[ƒ}ƒbƒg(&amp;O)] (ja)<br>
+     * [ãƒ•ã‚©ãƒ¼ãƒãƒƒãƒˆ(&amp;O)] (ja)<br>
      *
-     * @return key[MENU0002]‚É‘Î‰‚·‚é’lBŠO•”‚©‚ç“Ç‚İ‚İ‚ª‚Å‚«‚È‚¢ê‡‚É‚ÍA’è‹`‘‚Ì’l‚ğ–ß‚µ‚Ü‚·B•K‚¸nullˆÈŠO‚Ì’l‚ª–ß‚è‚Ü‚·B
+     * @return key[MENU0002]ã«å¯¾å¿œã™ã‚‹å€¤ã€‚å¤–éƒ¨ã‹ã‚‰èª­ã¿è¾¼ã¿ãŒã§ããªã„å ´åˆã«ã¯ã€å®šç¾©æ›¸ã®å€¤ã‚’æˆ»ã—ã¾ã™ã€‚å¿…ãšnullä»¥å¤–ã®å€¤ãŒæˆ»ã‚Šã¾ã™ã€‚
      */
     public String getMenu0002() {
-        // ‰Šú’l‚Æ‚µ‚Ä’è‹`‘‚Ì’l‚ğ—˜—p‚µ‚Ü‚·B
+        // åˆæœŸå€¤ã¨ã—ã¦å®šç¾©æ›¸ã®å€¤ã‚’åˆ©ç”¨ã—ã¾ã™ã€‚
         String strFormat = "F&ormat";
         try {
             if (fResourceBundle != null) {
@@ -114,7 +114,7 @@ public class BlancoSqlEditorPluginResourceBundle {
             }
         } catch (MissingResourceException ex) {
         }
-        // ’uŠ·•¶š—ñ‚Í‚Ğ‚Æ‚Â‚à‚ ‚è‚Ü‚¹‚ñB
+        // ç½®æ›æ–‡å­—åˆ—ã¯ã²ã¨ã¤ã‚‚ã‚ã‚Šã¾ã›ã‚“ã€‚
         return strFormat;
     }
 
@@ -122,12 +122,12 @@ public class BlancoSqlEditorPluginResourceBundle {
      * bundle[BlancoSqlEditorPlugin], key[MENU0002ToolTip]
      *
      * [Format SQL] (en)<br>
-     * [SQL‚ğ®Œ`‚µ‚Ü‚·] (ja)<br>
+     * [SQLã‚’æ•´å½¢ã—ã¾ã™] (ja)<br>
      *
-     * @return key[MENU0002ToolTip]‚É‘Î‰‚·‚é’lBŠO•”‚©‚ç“Ç‚İ‚İ‚ª‚Å‚«‚È‚¢ê‡‚É‚ÍA’è‹`‘‚Ì’l‚ğ–ß‚µ‚Ü‚·B•K‚¸nullˆÈŠO‚Ì’l‚ª–ß‚è‚Ü‚·B
+     * @return key[MENU0002ToolTip]ã«å¯¾å¿œã™ã‚‹å€¤ã€‚å¤–éƒ¨ã‹ã‚‰èª­ã¿è¾¼ã¿ãŒã§ããªã„å ´åˆã«ã¯ã€å®šç¾©æ›¸ã®å€¤ã‚’æˆ»ã—ã¾ã™ã€‚å¿…ãšnullä»¥å¤–ã®å€¤ãŒæˆ»ã‚Šã¾ã™ã€‚
      */
     public String getMENU0002ToolTip() {
-        // ‰Šú’l‚Æ‚µ‚Ä’è‹`‘‚Ì’l‚ğ—˜—p‚µ‚Ü‚·B
+        // åˆæœŸå€¤ã¨ã—ã¦å®šç¾©æ›¸ã®å€¤ã‚’åˆ©ç”¨ã—ã¾ã™ã€‚
         String strFormat = "Format SQL";
         try {
             if (fResourceBundle != null) {
@@ -135,7 +135,7 @@ public class BlancoSqlEditorPluginResourceBundle {
             }
         } catch (MissingResourceException ex) {
         }
-        // ’uŠ·•¶š—ñ‚Í‚Ğ‚Æ‚Â‚à‚ ‚è‚Ü‚¹‚ñB
+        // ç½®æ›æ–‡å­—åˆ—ã¯ã²ã¨ã¤ã‚‚ã‚ã‚Šã¾ã›ã‚“ã€‚
         return strFormat;
     }
 
@@ -143,12 +143,12 @@ public class BlancoSqlEditorPluginResourceBundle {
      * bundle[BlancoSqlEditorPlugin], key[MSG0001]
      *
      * [Format SQL: begin.] (en)<br>
-     * [SQL®Œ`‚ğÀsŠJn‚µ‚Ü‚·.] (ja)<br>
+     * [SQLæ•´å½¢ã‚’å®Ÿè¡Œé–‹å§‹ã—ã¾ã™.] (ja)<br>
      *
-     * @return key[MSG0001]‚É‘Î‰‚·‚é’lBŠO•”‚©‚ç“Ç‚İ‚İ‚ª‚Å‚«‚È‚¢ê‡‚É‚ÍA’è‹`‘‚Ì’l‚ğ–ß‚µ‚Ü‚·B•K‚¸nullˆÈŠO‚Ì’l‚ª–ß‚è‚Ü‚·B
+     * @return key[MSG0001]ã«å¯¾å¿œã™ã‚‹å€¤ã€‚å¤–éƒ¨ã‹ã‚‰èª­ã¿è¾¼ã¿ãŒã§ããªã„å ´åˆã«ã¯ã€å®šç¾©æ›¸ã®å€¤ã‚’æˆ»ã—ã¾ã™ã€‚å¿…ãšnullä»¥å¤–ã®å€¤ãŒæˆ»ã‚Šã¾ã™ã€‚
      */
     public String getMsg0001() {
-        // ‰Šú’l‚Æ‚µ‚Ä’è‹`‘‚Ì’l‚ğ—˜—p‚µ‚Ü‚·B
+        // åˆæœŸå€¤ã¨ã—ã¦å®šç¾©æ›¸ã®å€¤ã‚’åˆ©ç”¨ã—ã¾ã™ã€‚
         String strFormat = "Format SQL: begin.";
         try {
             if (fResourceBundle != null) {
@@ -156,7 +156,7 @@ public class BlancoSqlEditorPluginResourceBundle {
             }
         } catch (MissingResourceException ex) {
         }
-        // ’uŠ·•¶š—ñ‚Í‚Ğ‚Æ‚Â‚à‚ ‚è‚Ü‚¹‚ñB
+        // ç½®æ›æ–‡å­—åˆ—ã¯ã²ã¨ã¤ã‚‚ã‚ã‚Šã¾ã›ã‚“ã€‚
         return strFormat;
     }
 
@@ -164,12 +164,12 @@ public class BlancoSqlEditorPluginResourceBundle {
      * bundle[BlancoSqlEditorPlugin], key[MSG0002]
      *
      * [Format SQL: done.] (en)<br>
-     * [SQL®Œ`‚ªÀs‚³‚ê‚Ü‚µ‚½.] (ja)<br>
+     * [SQLæ•´å½¢ãŒå®Ÿè¡Œã•ã‚Œã¾ã—ãŸ.] (ja)<br>
      *
-     * @return key[MSG0002]‚É‘Î‰‚·‚é’lBŠO•”‚©‚ç“Ç‚İ‚İ‚ª‚Å‚«‚È‚¢ê‡‚É‚ÍA’è‹`‘‚Ì’l‚ğ–ß‚µ‚Ü‚·B•K‚¸nullˆÈŠO‚Ì’l‚ª–ß‚è‚Ü‚·B
+     * @return key[MSG0002]ã«å¯¾å¿œã™ã‚‹å€¤ã€‚å¤–éƒ¨ã‹ã‚‰èª­ã¿è¾¼ã¿ãŒã§ããªã„å ´åˆã«ã¯ã€å®šç¾©æ›¸ã®å€¤ã‚’æˆ»ã—ã¾ã™ã€‚å¿…ãšnullä»¥å¤–ã®å€¤ãŒæˆ»ã‚Šã¾ã™ã€‚
      */
     public String getMsg0002() {
-        // ‰Šú’l‚Æ‚µ‚Ä’è‹`‘‚Ì’l‚ğ—˜—p‚µ‚Ü‚·B
+        // åˆæœŸå€¤ã¨ã—ã¦å®šç¾©æ›¸ã®å€¤ã‚’åˆ©ç”¨ã—ã¾ã™ã€‚
         String strFormat = "Format SQL: done.";
         try {
             if (fResourceBundle != null) {
@@ -177,7 +177,7 @@ public class BlancoSqlEditorPluginResourceBundle {
             }
         } catch (MissingResourceException ex) {
         }
-        // ’uŠ·•¶š—ñ‚Í‚Ğ‚Æ‚Â‚à‚ ‚è‚Ü‚¹‚ñB
+        // ç½®æ›æ–‡å­—åˆ—ã¯ã²ã¨ã¤ã‚‚ã‚ã‚Šã¾ã›ã‚“ã€‚
         return strFormat;
     }
 
@@ -185,12 +185,12 @@ public class BlancoSqlEditorPluginResourceBundle {
      * bundle[BlancoSqlEditorPlugin], key[MSG0003]
      *
      * [Format SQL: no necessity to format.] (en)<br>
-     * [SQL®Œ`‚Ì•K—v‚Í‚ ‚è‚Ü‚¹‚ñ.] (ja)<br>
+     * [SQLæ•´å½¢ã®å¿…è¦ã¯ã‚ã‚Šã¾ã›ã‚“.] (ja)<br>
      *
-     * @return key[MSG0003]‚É‘Î‰‚·‚é’lBŠO•”‚©‚ç“Ç‚İ‚İ‚ª‚Å‚«‚È‚¢ê‡‚É‚ÍA’è‹`‘‚Ì’l‚ğ–ß‚µ‚Ü‚·B•K‚¸nullˆÈŠO‚Ì’l‚ª–ß‚è‚Ü‚·B
+     * @return key[MSG0003]ã«å¯¾å¿œã™ã‚‹å€¤ã€‚å¤–éƒ¨ã‹ã‚‰èª­ã¿è¾¼ã¿ãŒã§ããªã„å ´åˆã«ã¯ã€å®šç¾©æ›¸ã®å€¤ã‚’æˆ»ã—ã¾ã™ã€‚å¿…ãšnullä»¥å¤–ã®å€¤ãŒæˆ»ã‚Šã¾ã™ã€‚
      */
     public String getMsg0003() {
-        // ‰Šú’l‚Æ‚µ‚Ä’è‹`‘‚Ì’l‚ğ—˜—p‚µ‚Ü‚·B
+        // åˆæœŸå€¤ã¨ã—ã¦å®šç¾©æ›¸ã®å€¤ã‚’åˆ©ç”¨ã—ã¾ã™ã€‚
         String strFormat = "Format SQL: no necessity to format.";
         try {
             if (fResourceBundle != null) {
@@ -198,7 +198,7 @@ public class BlancoSqlEditorPluginResourceBundle {
             }
         } catch (MissingResourceException ex) {
         }
-        // ’uŠ·•¶š—ñ‚Í‚Ğ‚Æ‚Â‚à‚ ‚è‚Ü‚¹‚ñB
+        // ç½®æ›æ–‡å­—åˆ—ã¯ã²ã¨ã¤ã‚‚ã‚ã‚Šã¾ã›ã‚“ã€‚
         return strFormat;
     }
 
@@ -206,12 +206,12 @@ public class BlancoSqlEditorPluginResourceBundle {
      * bundle[BlancoSqlEditorPlugin], key[MSG0004]
      *
      * [Format SQL: exception occurs during SQL formatting. Check SQL is valid.] (en)<br>
-     * [SQL®Œ`‚Ì‰ß’ö‚Å—áŠO‚ª”­¶‚µ‚Ü‚µ‚½. SQL•¶‚ª³‚µ‚¢‚©‚Ç‚¤‚©ƒ`ƒFƒbƒN‚µ‚Ä‚­‚¾‚³‚¢.] (ja)<br>
+     * [SQLæ•´å½¢ã®éç¨‹ã§ä¾‹å¤–ãŒç™ºç”Ÿã—ã¾ã—ãŸ. SQLæ–‡ãŒæ­£ã—ã„ã‹ã©ã†ã‹ãƒã‚§ãƒƒã‚¯ã—ã¦ãã ã•ã„.] (ja)<br>
      *
-     * @return key[MSG0004]‚É‘Î‰‚·‚é’lBŠO•”‚©‚ç“Ç‚İ‚İ‚ª‚Å‚«‚È‚¢ê‡‚É‚ÍA’è‹`‘‚Ì’l‚ğ–ß‚µ‚Ü‚·B•K‚¸nullˆÈŠO‚Ì’l‚ª–ß‚è‚Ü‚·B
+     * @return key[MSG0004]ã«å¯¾å¿œã™ã‚‹å€¤ã€‚å¤–éƒ¨ã‹ã‚‰èª­ã¿è¾¼ã¿ãŒã§ããªã„å ´åˆã«ã¯ã€å®šç¾©æ›¸ã®å€¤ã‚’æˆ»ã—ã¾ã™ã€‚å¿…ãšnullä»¥å¤–ã®å€¤ãŒæˆ»ã‚Šã¾ã™ã€‚
      */
     public String getMsg0004() {
-        // ‰Šú’l‚Æ‚µ‚Ä’è‹`‘‚Ì’l‚ğ—˜—p‚µ‚Ü‚·B
+        // åˆæœŸå€¤ã¨ã—ã¦å®šç¾©æ›¸ã®å€¤ã‚’åˆ©ç”¨ã—ã¾ã™ã€‚
         String strFormat = "Format SQL: exception occurs during SQL formatting. Check SQL is valid.";
         try {
             if (fResourceBundle != null) {
@@ -219,7 +219,7 @@ public class BlancoSqlEditorPluginResourceBundle {
             }
         } catch (MissingResourceException ex) {
         }
-        // ’uŠ·•¶š—ñ‚Í‚Ğ‚Æ‚Â‚à‚ ‚è‚Ü‚¹‚ñB
+        // ç½®æ›æ–‡å­—åˆ—ã¯ã²ã¨ã¤ã‚‚ã‚ã‚Šã¾ã›ã‚“ã€‚
         return strFormat;
     }
 }
