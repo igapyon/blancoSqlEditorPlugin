@@ -17,31 +17,31 @@ import org.eclipse.jface.text.rules.RuleBasedPartitionScanner;
 import org.eclipse.jface.text.rules.Token;
 
 /**
- * BlancoSqlEditorƒvƒ‰ƒOƒCƒ“‚ÌƒnƒCƒ‰ƒCƒg•\Ž¦ŠÖ˜Aˆ— <br>
- * 2005.08.06 Tosiki Iga ƒnƒCƒ‰ƒCƒg•\Ž¦‹@”\‚Ì’Ç‰Á
+ * BlancoSqlEditorãƒ—ãƒ©ã‚°ã‚¤ãƒ³ã®ãƒã‚¤ãƒ©ã‚¤ãƒˆè¡¨ç¤ºé–¢é€£å‡¦ç† <br>
+ * 2005.08.06 Tosiki Iga ãƒã‚¤ãƒ©ã‚¤ãƒˆè¡¨ç¤ºæ©Ÿèƒ½ã®è¿½åŠ 
  * 
- * @author Toshiki Iga ƒnƒCƒ‰ƒCƒg•\Ž¦‹@”\‚Ì’Ç‰Á
+ * @author Toshiki Iga ãƒã‚¤ãƒ©ã‚¤ãƒˆè¡¨ç¤ºæ©Ÿèƒ½ã®è¿½åŠ 
  */
 public class SQLPartitionScanner extends RuleBasedPartitionScanner {
-    public final static String SQL_DEFAULT = "__sql_default";
+	public final static String SQL_DEFAULT = "__sql_default";
 
-    public final static String SQL89 = "__sql89_tag";
+	public final static String SQL89 = "__sql89_tag";
 
-    public final static String SQL92 = "__sql92_tag";
+	public final static String SQL92 = "__sql92_tag";
 
-    public final static String SQL99 = "__sql99_tag";
+	public final static String SQL99 = "__sql99_tag";
 
-    public final static String SQL_STRING = "__sql_string";
+	public final static String SQL_STRING = "__sql_string";
 
-    public final static String SQL_FAMOUS = "__sql_famous_tag";
+	public final static String SQL_FAMOUS = "__sql_famous_tag";
 
-    public final static String SQL_COMMENT = "__sql_comment";
+	public final static String SQL_COMMENT = "__sql_comment";
 
-    public SQLPartitionScanner() {
-        IPredicateRule[] rules = new IPredicateRule[2];
-        rules[0] = new MultiLineRule("/*", "*/", new Token(SQL_COMMENT));
-        rules[1] = new EndOfLineRule("--", new Token(SQL_COMMENT));
+	public SQLPartitionScanner() {
+		IPredicateRule[] rules = new IPredicateRule[2];
+		rules[0] = new MultiLineRule("/*", "*/", new Token(SQL_COMMENT));
+		rules[1] = new EndOfLineRule("--", new Token(SQL_COMMENT));
 
-        setPredicateRules(rules);
-    }
+		setPredicateRules(rules);
+	}
 }

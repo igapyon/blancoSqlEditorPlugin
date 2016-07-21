@@ -24,78 +24,76 @@ import blanco.commons.sql.format.BlancoSqlFormatterException;
 import blanco.commons.sql.format.BlancoSqlRule;
 
 /**
- * ‰EƒNƒŠƒbƒNƒƒjƒ…[‚É‚æ‚éSQL®Œ`‚ğÀŒ»‚µ‚Ü‚·B <br>
- * #TextEditorContext ‚É‘Î‚µ‚Äƒ|ƒbƒvƒAƒbƒvƒƒjƒ…[uFormat as SQLv‚ğ’Ç‰Á‚µ‚Ü‚·B
+ * å³ã‚¯ãƒªãƒƒã‚¯ãƒ¡ãƒ‹ãƒ¥ãƒ¼ã«ã‚ˆã‚‹SQLæ•´å½¢ã‚’å®Ÿç¾ã—ã¾ã™ã€‚ <br>
+ * #TextEditorContext ã«å¯¾ã—ã¦ãƒãƒƒãƒ—ã‚¢ãƒƒãƒ—ãƒ¡ãƒ‹ãƒ¥ãƒ¼ã€ŒFormat as SQLã€ã‚’è¿½åŠ ã—ã¾ã™ã€‚
  * 
- * @author sari ‰Šúƒo[ƒWƒ‡ƒ“‚ğì¬
- * @author Tosiki Iga ƒNƒ‰ƒX–¼‚È‚Ç‚ğ’²®
+ * @author sari åˆæœŸãƒãƒ¼ã‚¸ãƒ§ãƒ³ã‚’ä½œæˆ
+ * @author Tosiki Iga ã‚¯ãƒ©ã‚¹åãªã©ã‚’èª¿æ•´
  */
 public class BlancoSqlFormatAction implements IEditorActionDelegate {
 
-    private IWorkbenchPart activeEditor = null;
+	private IWorkbenchPart activeEditor = null;
 
-    private ITextSelection activeSelection = null;
+	private ITextSelection activeSelection = null;
 
-    private BlancoSqlFormatter formatter = null;
+	private BlancoSqlFormatter formatter = null;
 
-    /**
-     * ‚±‚ÌƒNƒ‰ƒX‚ÌƒRƒ“ƒXƒgƒ‰ƒNƒ^
-     */
-    public BlancoSqlFormatAction() {
-        super();
-    }
+	/**
+	 * ã“ã®ã‚¯ãƒ©ã‚¹ã®ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿
+	 */
+	public BlancoSqlFormatAction() {
+		super();
+	}
 
-    /**
-     * ƒAƒNƒeƒBƒu‚ÈƒGƒfƒBƒ^‚ğƒZƒbƒg‚µ‚Ü‚·B
-     */
-    public void setActiveEditor(IAction action, IEditorPart targetEditor) {
-        activeEditor = targetEditor;
-    }
+	/**
+	 * ã‚¢ã‚¯ãƒ†ã‚£ãƒ–ãªã‚¨ãƒ‡ã‚£ã‚¿ã‚’ã‚»ãƒƒãƒˆã—ã¾ã™ã€‚
+	 */
+	public void setActiveEditor(IAction action, IEditorPart targetEditor) {
+		activeEditor = targetEditor;
+	}
 
-    /**
-     * ‘I‘ğ‚ª•ÏX‚³‚ê‚½Û‚ÉŒÄ‚Ño‚³‚ê‚Ü‚·B
-     */
-    public void selectionChanged(IAction action, ISelection selection) {
-        if (selection instanceof ITextSelection) {
-            activeSelection = (ITextSelection) selection;
-        }
-    }
+	/**
+	 * é¸æŠãŒå¤‰æ›´ã•ã‚ŒãŸéš›ã«å‘¼ã³å‡ºã•ã‚Œã¾ã™ã€‚
+	 */
+	public void selectionChanged(IAction action, ISelection selection) {
+		if (selection instanceof ITextSelection) {
+			activeSelection = (ITextSelection) selection;
+		}
+	}
 
-    /**
-     * ÀÛ‚Éˆ—‚ğÀs‚µ‚Ü‚·B
-     */
-    public void run(IAction action) {
-        if (activeEditor != null) {
-            if (formatter == null) {
-                formatter = new BlancoSqlFormatter(new BlancoSqlRule());
-            }
+	/**
+	 * å®Ÿéš›ã«å‡¦ç†ã‚’å®Ÿè¡Œã—ã¾ã™ã€‚
+	 */
+	public void run(IAction action) {
+		if (activeEditor != null) {
+			if (formatter == null) {
+				formatter = new BlancoSqlFormatter(new BlancoSqlRule());
+			}
 
-            try {
-                getDocument().replace(activeSelection.getOffset(),
-                        activeSelection.getLength(),
-                        formatter.format(activeSelection.getText()));
-            } catch (BlancoSqlFormatterException ex) {
-                // “Á‚É‰½‚à‚µ‚Ü‚¹‚ñB
-            } catch (BadLocationException ex) {
-                ex.printStackTrace();
-            }
-        }
-    }
+			try {
+				getDocument().replace(activeSelection.getOffset(), activeSelection.getLength(),
+						formatter.format(activeSelection.getText()));
+			} catch (BlancoSqlFormatterException ex) {
+				// ç‰¹ã«ä½•ã‚‚ã—ã¾ã›ã‚“ã€‚
+			} catch (BadLocationException ex) {
+				ex.printStackTrace();
+			}
+		}
+	}
 
-    /**
-     * ƒhƒLƒ…ƒƒ“ƒgƒIƒuƒWƒFƒNƒg‚ğæ“¾‚µ‚Ü‚·B
-     * 
-     * @return ƒhƒLƒ…ƒƒ“ƒgƒIƒuƒWƒFƒNƒg
-     */
-    protected IDocument getDocument() {
-        if (activeEditor != null) {
-            if (activeEditor instanceof AbstractTextEditor) {
-                AbstractTextEditor editor = (AbstractTextEditor) activeEditor;
-                IDocument document = editor.getDocumentProvider().getDocument(
-                        editor.getEditorInput());
-                return document;
-            }
-        }
-        return null;
-    }
+	/**
+	 * ãƒ‰ã‚­ãƒ¥ãƒ¡ãƒ³ãƒˆã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚’å–å¾—ã—ã¾ã™ã€‚
+	 * 
+	 * @return ãƒ‰ã‚­ãƒ¥ãƒ¡ãƒ³ãƒˆã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆ
+	 */
+	protected IDocument getDocument() {
+		if (activeEditor != null) {
+			if (activeEditor instanceof AbstractTextEditor) {
+				AbstractTextEditor editor = (AbstractTextEditor) activeEditor;
+				IDocument document = editor.getDocumentProvider().getDocument(editor.getEditorInput());
+				return document;
+			}
+		}
+		return null;
+	}
 }

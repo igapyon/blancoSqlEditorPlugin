@@ -20,50 +20,47 @@ import org.eclipse.jface.text.source.ISourceViewer;
 import org.eclipse.jface.text.source.SourceViewerConfiguration;
 
 /**
- * BlancoSqlEditorƒvƒ‰ƒOƒCƒ“‚ÌƒnƒCƒ‰ƒCƒg•\Ž¦ŠÖ˜Aˆ— <br>
- * 2005.08.06 Tosiki Iga ƒnƒCƒ‰ƒCƒg•\Ž¦‹@”\‚Ì’Ç‰Á
+ * BlancoSqlEditorãƒ—ãƒ©ã‚°ã‚¤ãƒ³ã®ãƒã‚¤ãƒ©ã‚¤ãƒˆè¡¨ç¤ºé–¢é€£å‡¦ç† <br>
+ * 2005.08.06 Tosiki Iga ãƒã‚¤ãƒ©ã‚¤ãƒˆè¡¨ç¤ºæ©Ÿèƒ½ã®è¿½åŠ 
  * 
- * @author Toshiki Iga ƒnƒCƒ‰ƒCƒg•\Ž¦‹@”\‚Ì’Ç‰Á
+ * @author Toshiki Iga ãƒã‚¤ãƒ©ã‚¤ãƒˆè¡¨ç¤ºæ©Ÿèƒ½ã®è¿½åŠ 
  */
 public class SQLConfiguration extends SourceViewerConfiguration {
-    private SQLScanner scanner;
+	private SQLScanner scanner;
 
-    private ColorManager colorManager;
+	private ColorManager colorManager;
 
-    public SQLConfiguration(ColorManager colorManager) {
-        this.colorManager = colorManager;
-    }
+	public SQLConfiguration(ColorManager colorManager) {
+		this.colorManager = colorManager;
+	}
 
-    public String[] getConfiguredContentTypes(ISourceViewer sourceViewer) {
-        return new String[] { IDocument.DEFAULT_CONTENT_TYPE,
-                SQLPartitionScanner.SQL_COMMENT, SQLPartitionScanner.SQL89,
-                SQLPartitionScanner.SQL92, SQLPartitionScanner.SQL99,
-                SQLPartitionScanner.SQL_FAMOUS, SQLPartitionScanner.SQL_STRING };
-    }
+	public String[] getConfiguredContentTypes(ISourceViewer sourceViewer) {
+		return new String[] { IDocument.DEFAULT_CONTENT_TYPE, SQLPartitionScanner.SQL_COMMENT,
+				SQLPartitionScanner.SQL89, SQLPartitionScanner.SQL92, SQLPartitionScanner.SQL99,
+				SQLPartitionScanner.SQL_FAMOUS, SQLPartitionScanner.SQL_STRING };
+	}
 
-    protected SQLScanner getSQLScanner() {
-        if (scanner == null) {
-            scanner = new SQLScanner(colorManager);
-            scanner.setDefaultReturnToken(new Token(new TextAttribute(
-                    colorManager.getColor(ISQLColorConstants.DEFAULT))));
-        }
-        return scanner;
-    }
+	protected SQLScanner getSQLScanner() {
+		if (scanner == null) {
+			scanner = new SQLScanner(colorManager);
+			scanner.setDefaultReturnToken(
+					new Token(new TextAttribute(colorManager.getColor(ISQLColorConstants.DEFAULT))));
+		}
+		return scanner;
+	}
 
-    public IPresentationReconciler getPresentationReconciler(
-            ISourceViewer sourceViewer) {
-        PresentationReconciler reconciler = new PresentationReconciler();
+	public IPresentationReconciler getPresentationReconciler(ISourceViewer sourceViewer) {
+		PresentationReconciler reconciler = new PresentationReconciler();
 
-        DefaultDamagerRepairer dr = new DefaultDamagerRepairer(getSQLScanner());
-        reconciler.setDamager(dr, IDocument.DEFAULT_CONTENT_TYPE);
-        reconciler.setRepairer(dr, IDocument.DEFAULT_CONTENT_TYPE);
+		DefaultDamagerRepairer dr = new DefaultDamagerRepairer(getSQLScanner());
+		reconciler.setDamager(dr, IDocument.DEFAULT_CONTENT_TYPE);
+		reconciler.setRepairer(dr, IDocument.DEFAULT_CONTENT_TYPE);
 
-        NonRuleBasedDamagerRepairer ndr = new NonRuleBasedDamagerRepairer(
-                new TextAttribute(colorManager
-                        .getColor(ISQLColorConstants.SQL_COMMENT)));
-        reconciler.setDamager(ndr, SQLPartitionScanner.SQL_COMMENT);
-        reconciler.setRepairer(ndr, SQLPartitionScanner.SQL_COMMENT);
+		NonRuleBasedDamagerRepairer ndr = new NonRuleBasedDamagerRepairer(
+				new TextAttribute(colorManager.getColor(ISQLColorConstants.SQL_COMMENT)));
+		reconciler.setDamager(ndr, SQLPartitionScanner.SQL_COMMENT);
+		reconciler.setRepairer(ndr, SQLPartitionScanner.SQL_COMMENT);
 
-        return reconciler;
-    }
+		return reconciler;
+	}
 }

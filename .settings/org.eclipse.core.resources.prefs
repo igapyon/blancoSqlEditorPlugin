@@ -1,2 +1,15 @@
 eclipse.preferences.version=1
+encoding//src/blanco/plugin/sqleditor/BlancoSqlEditorPlugin.java=UTF-8
+encoding//src/blanco/plugin/sqleditor/editors/BlancoSQLRule.java=UTF-8
+encoding//src/blanco/plugin/sqleditor/editors/BlancoSqlEditor.java=UTF-8
+encoding//src/blanco/plugin/sqleditor/editors/BlancoSqlEditorContributor.java=UTF-8
+encoding//src/blanco/plugin/sqleditor/editors/ColorManager.java=UTF-8
+encoding//src/blanco/plugin/sqleditor/editors/ISQLColorConstants.java=UTF-8
+encoding//src/blanco/plugin/sqleditor/editors/NonRuleBasedDamagerRepairer.java=UTF-8
+encoding//src/blanco/plugin/sqleditor/editors/SQLConfiguration.java=UTF-8
+encoding//src/blanco/plugin/sqleditor/editors/SQLDocumentProvider.java=UTF-8
+encoding//src/blanco/plugin/sqleditor/editors/SQLPartitionScanner.java=UTF-8
+encoding//src/blanco/plugin/sqleditor/editors/SQLScanner.java=UTF-8
+encoding//src/blanco/plugin/sqleditor/editors/SQLWhitespaceDetector.java=UTF-8
+encoding//src/blanco/plugin/sqleditor/popup/BlancoSqlFormatAction.java=UTF-8
 encoding/<project>=Windows-31J

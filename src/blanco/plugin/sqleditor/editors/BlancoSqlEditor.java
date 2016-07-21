@@ -13,28 +13,28 @@ package blanco.plugin.sqleditor.editors;
 import org.eclipse.ui.editors.text.TextEditor;
 
 /**
- * BlancoSqlEditorƒvƒ‰ƒOƒCƒ“‚Ì–{‘Ì <br>
- * Šî–{“I‚É TextEditor‚»‚Ì‚Ü‚Ü‚Å‚·B<br>
- * 2005.08.06 Tosiki Iga ƒnƒCƒ‰ƒCƒg•\¦‹@”\‚Ì’Ç‰Á
+ * BlancoSqlEditorãƒ—ãƒ©ã‚°ã‚¤ãƒ³ã®æœ¬ä½“ <br>
+ * åŸºæœ¬çš„ã« TextEditorãã®ã¾ã¾ã§ã™ã€‚<br>
+ * 2005.08.06 Tosiki Iga ãƒã‚¤ãƒ©ã‚¤ãƒˆè¡¨ç¤ºæ©Ÿèƒ½ã®è¿½åŠ 
  * 
- * @author sari ƒIƒŠƒWƒiƒ‹”Å‚ÌŠJ”­
- * @author Toshiki Iga ƒvƒ‰ƒOƒCƒ“•”•ª‚Ì‰ü•Ï
+ * @author sari ã‚ªãƒªã‚¸ãƒŠãƒ«ç‰ˆã®é–‹ç™º
+ * @author Toshiki Iga ãƒ—ãƒ©ã‚°ã‚¤ãƒ³éƒ¨åˆ†ã®æ”¹å¤‰
  */
 public class BlancoSqlEditor extends TextEditor {
-    private ColorManager colorManager;
+	private ColorManager colorManager;
 
-    public BlancoSqlEditor() {
-        super();
-        // System.out.println("trace 1");
-        colorManager = new ColorManager();
-        // System.out.println("trace 2");
-        setSourceViewerConfiguration(new SQLConfiguration(colorManager));
-        // System.out.println("trace 3");
-        setDocumentProvider(new SQLDocumentProvider());
-    }
+	public BlancoSqlEditor() {
+		super();
+		// System.out.println("trace 1");
+		colorManager = new ColorManager();
+		// System.out.println("trace 2");
+		setSourceViewerConfiguration(new SQLConfiguration(colorManager));
+		// System.out.println("trace 3");
+		setDocumentProvider(new SQLDocumentProvider());
+	}
 
-    public void dispose() {
-        colorManager.dispose();
-        super.dispose();
-    }
+	public void dispose() {
+		colorManager.dispose();
+		super.dispose();
+	}
 }

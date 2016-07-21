@@ -20,104 +20,100 @@ import org.eclipse.jface.text.rules.WordRule;
 import blanco.commons.sql.format.BlancoSqlParser;
 
 /**
- * SQLƒnƒCƒ‰ƒCƒg•\¦‚Ì‚½‚ß‚Ìƒ‹[ƒ‹‚ğ’ñ‹Ÿ‚µ‚Ü‚·B<br>
- * 2005.08.14 Tosiki Iga: •¶š—ñ‚Ì“r’†‚É”’l‚ªŠÜ‚Ü‚ê‚é‚±‚Æ‚É‘Î‰B<br>
- * 2005.08.12 Tosiki Iga: blancoCommons‚Ì•¶š—ñ”»’èƒ‹[ƒ`ƒ“‚ğ—˜—p‚·‚é‚æ‚¤‚É•ÏXB<br>
+ * SQLãƒã‚¤ãƒ©ã‚¤ãƒˆè¡¨ç¤ºã®ãŸã‚ã®ãƒ«ãƒ¼ãƒ«ã‚’æä¾›ã—ã¾ã™ã€‚<br>
+ * 2005.08.14 Tosiki Iga: æ–‡å­—åˆ—ã®é€”ä¸­ã«æ•°å€¤ãŒå«ã¾ã‚Œã‚‹ã“ã¨ã«å¯¾å¿œã€‚<br>
+ * 2005.08.12 Tosiki Iga: blancoCommonsã®æ–‡å­—åˆ—åˆ¤å®šãƒ«ãƒ¼ãƒãƒ³ã‚’åˆ©ç”¨ã™ã‚‹ã‚ˆã†ã«å¤‰æ›´ã€‚<br>
  * 
  * @author Tosiki Iga
  */
 public class BlancoSQLRule extends WordRule implements IPredicateRule {
 
-    private IToken fSuccessTokenTotal;
+	private IToken fSuccessTokenTotal;
 
-    private IToken fSuccessToken89;
+	private IToken fSuccessToken89;
 
-    private IToken fSuccessToken92;
+	private IToken fSuccessToken92;
 
-    private IToken fSuccessToken99;
+	private IToken fSuccessToken99;
 
-    private IToken fSuccessTokenFamous;
+	private IToken fSuccessTokenFamous;
 
-    /**
-     * SQLƒnƒCƒ‰ƒCƒg•\¦‚Ì‚½‚ß‚Ìƒ‹[ƒ‹‚ÌƒRƒ“ƒXƒgƒ‰ƒNƒ^‚Å‚·B
-     * 
-     * @param successToken
-     * @param sqlKeywords
-     *            SQLƒL[ƒ[ƒh‚ğ—^‚¦‚Ä‚­‚¾‚³‚¢B
-     */
-    public BlancoSQLRule(IToken successToken89, String[] sqlKeywords89,
-            IToken successToken92, String[] sqlKeywords92,
-            IToken successToken99, String[] sqlKeywords99,
-            IToken successTokenFamous, String[] sqlKeywordsFamous) {
-        super(new BlancoSQLDetector(), new Token(
-                SQLPartitionScanner.SQL_DEFAULT));
-        fSuccessToken89 = successToken89;
-        fSuccessToken92 = successToken92;
-        fSuccessToken99 = successToken99;
-        fSuccessTokenFamous = successTokenFamous;
-        for (int i = 0; i < sqlKeywords89.length; i++) {
-            addWord(sqlKeywords89[i], successToken89);
-            addWord(sqlKeywords89[i].toLowerCase(), successToken89);
-        }
-        for (int i = 0; i < sqlKeywords92.length; i++) {
-            addWord(sqlKeywords92[i], successToken92);
-            addWord(sqlKeywords92[i].toLowerCase(), successToken92);
-        }
-        for (int i = 0; i < sqlKeywords99.length; i++) {
-            addWord(sqlKeywords99[i], successToken99);
-            addWord(sqlKeywords99[i].toLowerCase(), successToken99);
-        }
-        for (int i = 0; i < sqlKeywordsFamous.length; i++) {
-            addWord(sqlKeywordsFamous[i], successTokenFamous);
-            addWord(sqlKeywordsFamous[i].toLowerCase(), successTokenFamous);
-        }
-    }
+	/**
+	 * SQLãƒã‚¤ãƒ©ã‚¤ãƒˆè¡¨ç¤ºã®ãŸã‚ã®ãƒ«ãƒ¼ãƒ«ã®ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿ã§ã™ã€‚
+	 * 
+	 * @param successToken
+	 * @param sqlKeywords
+	 *            SQLã‚­ãƒ¼ãƒ¯ãƒ¼ãƒ‰ã‚’ä¸ãˆã¦ãã ã•ã„ã€‚
+	 */
+	public BlancoSQLRule(IToken successToken89, String[] sqlKeywords89, IToken successToken92, String[] sqlKeywords92,
+			IToken successToken99, String[] sqlKeywords99, IToken successTokenFamous, String[] sqlKeywordsFamous) {
+		super(new BlancoSQLDetector(), new Token(SQLPartitionScanner.SQL_DEFAULT));
+		fSuccessToken89 = successToken89;
+		fSuccessToken92 = successToken92;
+		fSuccessToken99 = successToken99;
+		fSuccessTokenFamous = successTokenFamous;
+		for (int i = 0; i < sqlKeywords89.length; i++) {
+			addWord(sqlKeywords89[i], successToken89);
+			addWord(sqlKeywords89[i].toLowerCase(), successToken89);
+		}
+		for (int i = 0; i < sqlKeywords92.length; i++) {
+			addWord(sqlKeywords92[i], successToken92);
+			addWord(sqlKeywords92[i].toLowerCase(), successToken92);
+		}
+		for (int i = 0; i < sqlKeywords99.length; i++) {
+			addWord(sqlKeywords99[i], successToken99);
+			addWord(sqlKeywords99[i].toLowerCase(), successToken99);
+		}
+		for (int i = 0; i < sqlKeywordsFamous.length; i++) {
+			addWord(sqlKeywordsFamous[i], successTokenFamous);
+			addWord(sqlKeywordsFamous[i].toLowerCase(), successTokenFamous);
+		}
+	}
 
-    public IToken evaluate(ICharacterScanner scanner, boolean resume) {
-        return evaluate(scanner);
-    }
+	public IToken evaluate(ICharacterScanner scanner, boolean resume) {
+		return evaluate(scanner);
+	}
 
-    public IToken evaluate(ICharacterScanner scanner) {
-        IToken result = super.evaluate(scanner);
-        if (result == fSuccessToken89) {
-            fSuccessTokenTotal = result;
-        } else if (result == fSuccessToken92) {
-            fSuccessTokenTotal = result;
-        } else if (result == fSuccessToken99) {
-            fSuccessTokenTotal = result;
-        } else if (result == fSuccessTokenFamous) {
-            fSuccessTokenTotal = result;
-        }
-        return result;
-    }
+	public IToken evaluate(ICharacterScanner scanner) {
+		IToken result = super.evaluate(scanner);
+		if (result == fSuccessToken89) {
+			fSuccessTokenTotal = result;
+		} else if (result == fSuccessToken92) {
+			fSuccessTokenTotal = result;
+		} else if (result == fSuccessToken99) {
+			fSuccessTokenTotal = result;
+		} else if (result == fSuccessTokenFamous) {
+			fSuccessTokenTotal = result;
+		}
+		return result;
+	}
 
-    public IToken getSuccessToken() {
-        return fSuccessTokenTotal;
-    }
+	public IToken getSuccessToken() {
+		return fSuccessTokenTotal;
+	}
 
-    /**
-     * SQL•¶‚ÌƒL[ƒ[ƒh”»’è‚ğs‚¢‚Ü‚·B
-     * 
-     * @author iga
-     */
-    static class BlancoSQLDetector implements IWordDetector {
-        /**
-         * •¶š—ñŠJn”»’è‚ğs‚¢‚Ü‚·<br>
-         * Eclipse Platform‚ÌŒÂ«‚É‚æ‚èAEclipse 3.1‚É‚¨‚¢‚Ä
-         * 65535(‚à‚Æ‚Í-1)‚Æ‚¢‚¤“Áê‚È’l‚ª“ü‚Á‚Ä‚­‚é‚±‚Æ‚ª’m‚ç‚ê‚Ä‚¢‚Ü‚·B
-         */
-        public boolean isWordStart(char character) {
-            return BlancoSqlParser.isLetter(character);
-        }
+	/**
+	 * SQLæ–‡ã®ã‚­ãƒ¼ãƒ¯ãƒ¼ãƒ‰åˆ¤å®šã‚’è¡Œã„ã¾ã™ã€‚
+	 * 
+	 * @author iga
+	 */
+	static class BlancoSQLDetector implements IWordDetector {
+		/**
+		 * æ–‡å­—åˆ—é–‹å§‹åˆ¤å®šã‚’è¡Œã„ã¾ã™<br>
+		 * Eclipse Platformã®å€‹æ€§ã«ã‚ˆã‚Šã€Eclipse 3.1ã«ãŠã„ã¦
+		 * 65535(ã‚‚ã¨ã¯-1)ã¨ã„ã†ç‰¹æ®Šãªå€¤ãŒå…¥ã£ã¦ãã‚‹ã“ã¨ãŒçŸ¥ã‚‰ã‚Œã¦ã„ã¾ã™ã€‚
+		 */
+		public boolean isWordStart(char character) {
+			return BlancoSqlParser.isLetter(character);
+		}
 
-        /**
-         * •¶š—ñ‚Ì“r’†‚Å‚ ‚é‚©‚Ç‚¤‚©‚Ì”»’è‚ğs‚¢‚Ü‚·<Br>
-         * •¶š‚Ì“r’†‚É‚Í”š‚ªoŒ»‚µ“¾‚é‚±‚Æ‚ª’m‚ç‚ê‚Ä‚¢‚Ü‚·B‚±‚Ì‚½‚ßAisLetter‚Æ‹¤‚É
-         * isDigit‚ğ—p‚¢‚ÄA•¶š‚Æ”’l‚ÉŠY“–‚·‚é‚©‚Ç‚¤‚©‚Ì”»’è‚ğs‚Á‚Ä‚¢‚Ü‚·B
-         */
-        public boolean isWordPart(char character) {
-            return (BlancoSqlParser.isLetter(character) || BlancoSqlParser
-                    .isDigit(character));
-        }
-    }
+		/**
+		 * æ–‡å­—åˆ—ã®é€”ä¸­ã§ã‚ã‚‹ã‹ã©ã†ã‹ã®åˆ¤å®šã‚’è¡Œã„ã¾ã™<Br>
+		 * æ–‡å­—ã®é€”ä¸­ã«ã¯æ•°å­—ãŒå‡ºç¾ã—å¾—ã‚‹ã“ã¨ãŒçŸ¥ã‚‰ã‚Œã¦ã„ã¾ã™ã€‚ã“ã®ãŸã‚ã€isLetterã¨å…±ã«
+		 * isDigitã‚’ç”¨ã„ã¦ã€æ–‡å­—ã¨æ•°å€¤ã«è©²å½“ã™ã‚‹ã‹ã©ã†ã‹ã®åˆ¤å®šã‚’è¡Œã£ã¦ã„ã¾ã™ã€‚
+		 */
+		public boolean isWordPart(char character) {
+			return (BlancoSqlParser.isLetter(character) || BlancoSqlParser.isDigit(character));
+		}
+	}
 };

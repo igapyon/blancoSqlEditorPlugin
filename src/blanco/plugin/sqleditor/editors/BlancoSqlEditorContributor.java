@@ -29,106 +29,86 @@ import blanco.commons.sql.format.BlancoSqlRule;
 import blanco.plugin.sqleditor.BlancoSqlEditorPlugin;
 
 /**
- * BlancoSqlEditorƒvƒ‰ƒOƒCƒ“‚ÌƒRƒ“ƒgƒŠƒrƒ…[ƒ^[ <br>
- * ƒƒjƒ…[‚ÆƒXƒe[ƒ^ƒXƒo[XV‚Ì‹@”\‚ª•t—^‚³‚ê‚Ä‚¢‚Ü‚·B
+ * BlancoSqlEditorãƒ—ãƒ©ã‚°ã‚¤ãƒ³ã®ã‚³ãƒ³ãƒˆãƒªãƒ“ãƒ¥ãƒ¼ã‚¿ãƒ¼ <br>
+ * ãƒ¡ãƒ‹ãƒ¥ãƒ¼ã¨ã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹ãƒãƒ¼æ›´æ–°ã®æ©Ÿèƒ½ãŒä»˜ä¸ã•ã‚Œã¦ã„ã¾ã™ã€‚
  * 
- * @author sari ƒIƒŠƒWƒiƒ‹”Å‚ÌŠJ”­
- * @author Toshiki Iga ƒvƒ‰ƒOƒCƒ“•”•ª‚Ì‰ü•Ï
+ * @author sari ã‚ªãƒªã‚¸ãƒŠãƒ«ç‰ˆã®é–‹ç™º
+ * @author Toshiki Iga ãƒ—ãƒ©ã‚°ã‚¤ãƒ³éƒ¨åˆ†ã®æ”¹å¤‰
  */
 public class BlancoSqlEditorContributor extends TextEditorActionContributor {
-    private Action menuAction = null;
+	private Action menuAction = null;
 
-    private IStatusLineManager statusLineManager = null;
+	private IStatusLineManager statusLineManager = null;
 
-    public BlancoSqlEditorContributor() {
-        super();
-        createActions();
-    }
+	public BlancoSqlEditorContributor() {
+		super();
+		createActions();
+	}
 
-    private void createActions() {
-        menuAction = new Action() {
-            public void run() {
-                try {
-                    statusLineManager.setMessage(BlancoSqlEditorPlugin
-                            .getResourceBundle().getMsg0001());
+	private void createActions() {
+		menuAction = new Action() {
+			public void run() {
+				try {
+					statusLineManager.setMessage(BlancoSqlEditorPlugin.getResourceBundle().getMsg0001());
 
-                    IEditorPart activeEditor = getPage().getActiveEditor();
+					IEditorPart activeEditor = getPage().getActiveEditor();
 
-                    TextEditor editor = (activeEditor instanceof TextEditor) ? (TextEditor) activeEditor
-                            : null;
-                    if (editor != null) {
-                        editor.showBusy(true);
-                        String editorText = editor.getDocumentProvider()
-                                .getDocument(editor.getEditorInput()).get();
+					TextEditor editor = (activeEditor instanceof TextEditor) ? (TextEditor) activeEditor : null;
+					if (editor != null) {
+						editor.showBusy(true);
+						String editorText = editor.getDocumentProvider().getDocument(editor.getEditorInput()).get();
 
-                        BlancoSqlFormatter formatter = new BlancoSqlFormatter(
-                                new BlancoSqlRule());
-                        try {
-                            String editorTextAfter = formatter
-                                    .format(editorText);
-                            if (editorText.equals(editorTextAfter) == false) {
-                                editor.getDocumentProvider().getDocument(
-                                        editor.getEditorInput()).set(
-                                        editorTextAfter);
+						BlancoSqlFormatter formatter = new BlancoSqlFormatter(new BlancoSqlRule());
+						try {
+							String editorTextAfter = formatter.format(editorText);
+							if (editorText.equals(editorTextAfter) == false) {
+								editor.getDocumentProvider().getDocument(editor.getEditorInput()).set(editorTextAfter);
 
-                                editor.showChangeInformation(true);
-                                statusLineManager
-                                        .setMessage(BlancoSqlEditorPlugin
-                                                .getResourceBundle()
-                                                .getMsg0002());
-                            } else {
-                                statusLineManager
-                                        .setMessage(BlancoSqlEditorPlugin
-                                                .getResourceBundle()
-                                                .getMsg0003());
-                            }
-                        } catch (BlancoSqlFormatterException ex) {
-                            // SQL®Œ`‚ÌÛ‚Ì—áŠO‚Í ƒXƒe[ƒ^ƒXƒo[‚É‚Í(ƒGƒ‰[‚Å‚Í‚È‚¢)ƒƒbƒZ[ƒW‚Æ‚µ‚Ä•\¦‚µ‚Ü‚·B
-                            // ‚È‚º‚È‚çAƒGƒ‰[‚Æ‚µ‚Ä•\¦‚·‚é‚ÆAƒvƒ‰ƒOƒCƒ“‚ÌƒAƒNƒVƒ‡ƒ“‚»‚Ì‚à‚Ì‚ª–³Œø‰»‚µ‚Ä‚µ‚Ü‚¤‚æ‚¤‚¾‚©‚ç‚Å‚·B
-                            statusLineManager.setMessage(BlancoSqlEditorPlugin
-                                    .getResourceBundle().getMsg0004()
-                                    + ":" + ex.toString());
-                        }
+								editor.showChangeInformation(true);
+								statusLineManager.setMessage(BlancoSqlEditorPlugin.getResourceBundle().getMsg0002());
+							} else {
+								statusLineManager.setMessage(BlancoSqlEditorPlugin.getResourceBundle().getMsg0003());
+							}
+						} catch (BlancoSqlFormatterException ex) {
+							// SQLæ•´å½¢ã®éš›ã®ä¾‹å¤–ã¯ ã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹ãƒãƒ¼ã«ã¯(ã‚¨ãƒ©ãƒ¼ã§ã¯ãªã„)ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ã¨ã—ã¦è¡¨ç¤ºã—ã¾ã™ã€‚
+							// ãªãœãªã‚‰ã€ã‚¨ãƒ©ãƒ¼ã¨ã—ã¦è¡¨ç¤ºã™ã‚‹ã¨ã€ãƒ—ãƒ©ã‚°ã‚¤ãƒ³ã®ã‚¢ã‚¯ã‚·ãƒ§ãƒ³ãã®ã‚‚ã®ãŒç„¡åŠ¹åŒ–ã—ã¦ã—ã¾ã†ã‚ˆã†ã ã‹ã‚‰ã§ã™ã€‚
+							statusLineManager.setMessage(
+									BlancoSqlEditorPlugin.getResourceBundle().getMsg0004() + ":" + ex.toString());
+						}
 
-                        editor.showBusy(false);
-                    } else {
-                        statusLineManager
-                                .setErrorMessage("fail to get editor during SQL formatting.");
-                    }
-                } catch (Exception ex) {
-                    statusLineManager
-                            .setErrorMessage("unexpected exception occurs during SQL formatting."
-                                    + ex.toString());
-                }
-            }
-        };
+						editor.showBusy(false);
+					} else {
+						statusLineManager.setErrorMessage("fail to get editor during SQL formatting.");
+					}
+				} catch (Exception ex) {
+					statusLineManager
+							.setErrorMessage("unexpected exception occurs during SQL formatting." + ex.toString());
+				}
+			}
+		};
 
-        menuAction.setText(BlancoSqlEditorPlugin.getResourceBundle()
-                .getMenu0002());
-        menuAction.setToolTipText(BlancoSqlEditorPlugin.getResourceBundle()
-                .getMENU0002ToolTip());
-        menuAction.setAccelerator(SWT.CTRL | SWT.SHIFT | 'F');
-        menuAction.setImageDescriptor(PlatformUI.getWorkbench()
-                .getSharedImages().getImageDescriptor(
-                        IDE.SharedImages.IMG_OBJS_TASK_TSK));
-    }
+		menuAction.setText(BlancoSqlEditorPlugin.getResourceBundle().getMenu0002());
+		menuAction.setToolTipText(BlancoSqlEditorPlugin.getResourceBundle().getMENU0002ToolTip());
+		menuAction.setAccelerator(SWT.CTRL | SWT.SHIFT | 'F');
+		menuAction.setImageDescriptor(
+				PlatformUI.getWorkbench().getSharedImages().getImageDescriptor(IDE.SharedImages.IMG_OBJS_TASK_TSK));
+	}
 
-    public void contributeToMenu(IMenuManager manager) {
-        super.contributeToMenu(manager);
-        IMenuManager menu = new MenuManager(BlancoSqlEditorPlugin
-                .getResourceBundle().getMenu0001());
-        manager.prependToGroup(IWorkbenchActionConstants.MB_ADDITIONS, menu);
-        menu.add(menuAction);
-    }
+	public void contributeToMenu(IMenuManager manager) {
+		super.contributeToMenu(manager);
+		IMenuManager menu = new MenuManager(BlancoSqlEditorPlugin.getResourceBundle().getMenu0001());
+		manager.prependToGroup(IWorkbenchActionConstants.MB_ADDITIONS, menu);
+		menu.add(menuAction);
+	}
 
-    public void contributeToToolBar(IToolBarManager manager) {
-        super.contributeToToolBar(manager);
-        manager.add(new Separator());
-        manager.add(menuAction);
-    }
+	public void contributeToToolBar(IToolBarManager manager) {
+		super.contributeToToolBar(manager);
+		manager.add(new Separator());
+		manager.add(menuAction);
+	}
 
-    public void contributeToStatusLine(IStatusLineManager statusLineManager) {
-        super.contributeToStatusLine(statusLineManager);
-        this.statusLineManager = statusLineManager;
-    }
+	public void contributeToStatusLine(IStatusLineManager statusLineManager) {
+		super.contributeToStatusLine(statusLineManager);
+		this.statusLineManager = statusLineManager;
+	}
 }

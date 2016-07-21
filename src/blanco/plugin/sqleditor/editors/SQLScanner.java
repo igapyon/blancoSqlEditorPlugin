@@ -20,37 +20,32 @@ import org.eclipse.jface.text.rules.WhitespaceRule;
 import blanco.commons.sql.format.BlancoSqlConstants;
 
 /**
- * BlancoSqlEditor�v���O�C���̃n�C���C�g�\���֘A���� <br>
- * 2005.08.06 Tosiki Iga �n�C���C�g�\���@�\�̒ǉ�
+ * BlancoSqlEditorプラグインのハイライト表示関連処理 <br>
+ * 2005.08.06 Tosiki Iga ハイライト表示機能の追加
  * 
- * @author Toshiki Iga �n�C���C�g�\���@�\�̒ǉ�
+ * @author Toshiki Iga ハイライト表示機能の追加
  */
 public class SQLScanner extends RuleBasedScanner {
 
-    public SQLScanner(ColorManager manager) {
-        IRule[] rules = new IRule[4];
-        // Add rule for processing instructions
-        // �o�b�N�X���b�V���̓G�X�P�[�v�R�[�h�Ɣ��f���܂��B
-        rules[0] = new SingleLineRule("\"", "\"", new Token(new TextAttribute(
-                manager.getColor(ISQLColorConstants.SQL_STRING_DOUBLEQUOTE))),
-                '\\');
-        // �o�b�N�X���b�V���̓G�X�P�[�v�R�[�h�Ɣ��f���܂��B
-        rules[1] = new SingleLineRule("\'", "\'", new Token(new TextAttribute(
-                manager.getColor(ISQLColorConstants.SQL_STRING_QUOTE))), '\\');
-        rules[2] = new BlancoSQLRule(new Token(new TextAttribute(manager
-                .getColor(ISQLColorConstants.ANSI_SQL89))),
-                BlancoSqlConstants.SQL89_RESERVED_WORDS, new Token(
-                        new TextAttribute(manager
-                                .getColor(ISQLColorConstants.ANSI_SQL92))),
-                BlancoSqlConstants.SQL92_RESERVED_WORDS, new Token(
-                        new TextAttribute(manager
-                                .getColor(ISQLColorConstants.ANSI_SQL99))),
-                BlancoSqlConstants.SQL99_RESERVED_WORDS, new Token(
-                        new TextAttribute(manager
-                                .getColor(ISQLColorConstants.SQL_FAMOUS))),
-                BlancoSqlConstants.SQL_FAMOUS_WORDS);
-        rules[3] = new WhitespaceRule(new SQLWhitespaceDetector());
+	public SQLScanner(ColorManager manager) {
+		IRule[] rules = new IRule[4];
+		// Add rule for processing instructions
+		// バックスラッシュはエスケープコードと判断します。
+		rules[0] = new SingleLineRule("\"", "\"",
+				new Token(new TextAttribute(manager.getColor(ISQLColorConstants.SQL_STRING_DOUBLEQUOTE))), '\\');
+		// バックスラッシュはエスケープコードと判断します。
+		rules[1] = new SingleLineRule("\'", "\'",
+				new Token(new TextAttribute(manager.getColor(ISQLColorConstants.SQL_STRING_QUOTE))), '\\');
+		rules[2] = new BlancoSQLRule(new Token(new TextAttribute(manager.getColor(ISQLColorConstants.ANSI_SQL89))),
+				BlancoSqlConstants.SQL89_RESERVED_WORDS,
+				new Token(new TextAttribute(manager.getColor(ISQLColorConstants.ANSI_SQL92))),
+				BlancoSqlConstants.SQL92_RESERVED_WORDS,
+				new Token(new TextAttribute(manager.getColor(ISQLColorConstants.ANSI_SQL99))),
+				BlancoSqlConstants.SQL99_RESERVED_WORDS,
+				new Token(new TextAttribute(manager.getColor(ISQLColorConstants.SQL_FAMOUS))),
+				BlancoSqlConstants.SQL_FAMOUS_WORDS);
+		rules[3] = new WhitespaceRule(new SQLWhitespaceDetector());
 
-        setRules(rules);
-    }
+		setRules(rules);
+	}
 }

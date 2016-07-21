@@ -19,27 +19,27 @@ import org.eclipse.swt.graphics.RGB;
 import org.eclipse.swt.widgets.Display;
 
 /**
- * BlancoSqlEditorƒvƒ‰ƒOƒCƒ“‚ÌƒnƒCƒ‰ƒCƒg•\Ž¦ŠÖ˜Aˆ— <br>
- * 2005.08.06 Tosiki Iga ƒnƒCƒ‰ƒCƒg•\Ž¦‹@”\‚Ì’Ç‰Á
+ * BlancoSqlEditorãƒ—ãƒ©ã‚°ã‚¤ãƒ³ã®ãƒã‚¤ãƒ©ã‚¤ãƒˆè¡¨ç¤ºé–¢é€£å‡¦ç† <br>
+ * 2005.08.06 Tosiki Iga ãƒã‚¤ãƒ©ã‚¤ãƒˆè¡¨ç¤ºæ©Ÿèƒ½ã®è¿½åŠ 
  * 
- * @author Toshiki Iga ƒnƒCƒ‰ƒCƒg•\Ž¦‹@”\‚Ì’Ç‰Á
+ * @author Toshiki Iga ãƒã‚¤ãƒ©ã‚¤ãƒˆè¡¨ç¤ºæ©Ÿèƒ½ã®è¿½åŠ 
  */
 public class ColorManager {
 
-    protected Map fColorTable = new HashMap(20);
+	protected Map fColorTable = new HashMap(20);
 
-    public void dispose() {
-        Iterator e = fColorTable.values().iterator();
-        while (e.hasNext())
-            ((Color) e.next()).dispose();
-    }
+	public void dispose() {
+		Iterator e = fColorTable.values().iterator();
+		while (e.hasNext())
+			((Color) e.next()).dispose();
+	}
 
-    public Color getColor(RGB rgb) {
-        Color color = (Color) fColorTable.get(rgb);
-        if (color == null) {
-            color = new Color(Display.getCurrent(), rgb);
-            fColorTable.put(rgb, color);
-        }
-        return color;
-    }
+	public Color getColor(RGB rgb) {
+		Color color = (Color) fColorTable.get(rgb);
+		if (color == null) {
+			color = new Color(Display.getCurrent(), rgb);
+			fColorTable.put(rgb, color);
+		}
+		return color;
+	}
 }

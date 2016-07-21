@@ -17,29 +17,25 @@ import org.eclipse.jface.text.rules.DefaultPartitioner;
 import org.eclipse.ui.editors.text.FileDocumentProvider;
 
 /**
- * BlancoSqlEditorƒvƒ‰ƒOƒCƒ“‚ÌƒnƒCƒ‰ƒCƒg•\¦ŠÖ˜Aˆ— <br>
- * 2005.08.06 Tosiki Iga ƒnƒCƒ‰ƒCƒg•\¦‹@”\‚Ì’Ç‰Á
+ * BlancoSqlEditorãƒ—ãƒ©ã‚°ã‚¤ãƒ³ã®ãƒã‚¤ãƒ©ã‚¤ãƒˆè¡¨ç¤ºé–¢é€£å‡¦ç† <br>
+ * 2005.08.06 Tosiki Iga ãƒã‚¤ãƒ©ã‚¤ãƒˆè¡¨ç¤ºæ©Ÿèƒ½ã®è¿½åŠ 
  * 
- * @author Toshiki Iga ƒnƒCƒ‰ƒCƒg•\¦‹@”\‚Ì’Ç‰Á
+ * @author Toshiki Iga ãƒã‚¤ãƒ©ã‚¤ãƒˆè¡¨ç¤ºæ©Ÿèƒ½ã®è¿½åŠ 
  */
 public class SQLDocumentProvider extends FileDocumentProvider {
 
-    protected IDocument createDocument(Object element) throws CoreException {
-        IDocument document = super.createDocument(element);
-        if (document != null) {
-            /**
-             * Eclipse 3.0‚Æ‚ÌŒİŠ·«‚ğæ‚é‚½‚ß‚É DefaultPartitioner ‚ğ—˜—p‚¹‚´‚é‚ğ“¾‚Ü‚¹‚ñB
-             */
-            IDocumentPartitioner partitioner = new DefaultPartitioner(
-                    new SQLPartitionScanner(), new String[] {
-                            SQLPartitionScanner.SQL89,
-                            SQLPartitionScanner.SQL92,
-                            SQLPartitionScanner.SQL99,
-                            SQLPartitionScanner.SQL_FAMOUS,
-                            SQLPartitionScanner.SQL_COMMENT });
-            partitioner.connect(document);
-            document.setDocumentPartitioner(partitioner);
-        }
-        return document;
-    }
+	protected IDocument createDocument(Object element) throws CoreException {
+		IDocument document = super.createDocument(element);
+		if (document != null) {
+			/**
+			 * Eclipse 3.0ã¨ã®äº’æ›æ€§ã‚’å–ã‚‹ãŸã‚ã« DefaultPartitioner ã‚’åˆ©ç”¨ã›ã–ã‚‹ã‚’å¾—ã¾ã›ã‚“ã€‚
+			 */
+			IDocumentPartitioner partitioner = new DefaultPartitioner(new SQLPartitionScanner(),
+					new String[] { SQLPartitionScanner.SQL89, SQLPartitionScanner.SQL92, SQLPartitionScanner.SQL99,
+							SQLPartitionScanner.SQL_FAMOUS, SQLPartitionScanner.SQL_COMMENT });
+			partitioner.connect(document);
+			document.setDocumentPartitioner(partitioner);
+		}
+		return document;
+	}
 }

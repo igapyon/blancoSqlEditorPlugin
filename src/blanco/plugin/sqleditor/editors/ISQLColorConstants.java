@@ -13,25 +13,25 @@ package blanco.plugin.sqleditor.editors;
 import org.eclipse.swt.graphics.RGB;
 
 /**
- * BlancoSqlEditorƒvƒ‰ƒOƒCƒ“‚ÌƒnƒCƒ‰ƒCƒg•\Ž¦ŠÖ˜Aˆ— <br>
- * 2005.08.06 Tosiki Iga ƒnƒCƒ‰ƒCƒg•\Ž¦‹@”\‚Ì’Ç‰Á
+ * BlancoSqlEditorãƒ—ãƒ©ã‚°ã‚¤ãƒ³ã®ãƒã‚¤ãƒ©ã‚¤ãƒˆè¡¨ç¤ºé–¢é€£å‡¦ç† <br>
+ * 2005.08.06 Tosiki Iga ãƒã‚¤ãƒ©ã‚¤ãƒˆè¡¨ç¤ºæ©Ÿèƒ½ã®è¿½åŠ 
  * 
- * @author Toshiki Iga ƒnƒCƒ‰ƒCƒg•\Ž¦‹@”\‚Ì’Ç‰Á
+ * @author Toshiki Iga ãƒã‚¤ãƒ©ã‚¤ãƒˆè¡¨ç¤ºæ©Ÿèƒ½ã®è¿½åŠ 
  */
 public interface ISQLColorConstants {
-    RGB SQL_COMMENT = new RGB(0, 192, 0);
+	RGB SQL_COMMENT = new RGB(0, 192, 0);
 
-    RGB SQL_STRING_QUOTE = new RGB(192, 96, 0);
+	RGB SQL_STRING_QUOTE = new RGB(192, 96, 0);
 
-    RGB SQL_STRING_DOUBLEQUOTE = new RGB(128, 96, 64);
+	RGB SQL_STRING_DOUBLEQUOTE = new RGB(128, 96, 64);
 
-    RGB DEFAULT = new RGB(0, 0, 0);
+	RGB DEFAULT = new RGB(0, 0, 0);
 
-    RGB ANSI_SQL89 = new RGB(255, 0, 255);
+	RGB ANSI_SQL89 = new RGB(255, 0, 255);
 
-    RGB ANSI_SQL92 = new RGB(192, 0, 255);
+	RGB ANSI_SQL92 = new RGB(192, 0, 255);
 
-    RGB ANSI_SQL99 = new RGB(96, 0, 255);
+	RGB ANSI_SQL99 = new RGB(96, 0, 255);
 
-    RGB SQL_FAMOUS = new RGB(0, 128, 255);
+	RGB SQL_FAMOUS = new RGB(0, 128, 255);
 }

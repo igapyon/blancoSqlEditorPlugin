@@ -13,14 +13,14 @@ package blanco.plugin.sqleditor.editors;
 import org.eclipse.jface.text.rules.IWhitespaceDetector;
 
 /**
- * BlancoSqlEditorƒvƒ‰ƒOƒCƒ“‚ÌƒnƒCƒ‰ƒCƒg•\Ž¦ŠÖ˜Aˆ— <br>
- * 2005.08.06 Tosiki Iga ƒnƒCƒ‰ƒCƒg•\Ž¦‹@”\‚Ì’Ç‰Á
+ * BlancoSqlEditorãƒ—ãƒ©ã‚°ã‚¤ãƒ³ã®ãƒã‚¤ãƒ©ã‚¤ãƒˆè¡¨ç¤ºé–¢é€£å‡¦ç† <br>
+ * 2005.08.06 Tosiki Iga ãƒã‚¤ãƒ©ã‚¤ãƒˆè¡¨ç¤ºæ©Ÿèƒ½ã®è¿½åŠ 
  * 
- * @author Toshiki Iga ƒnƒCƒ‰ƒCƒg•\Ž¦‹@”\‚Ì’Ç‰Á
+ * @author Toshiki Iga ãƒã‚¤ãƒ©ã‚¤ãƒˆè¡¨ç¤ºæ©Ÿèƒ½ã®è¿½åŠ 
  */
 public class SQLWhitespaceDetector implements IWhitespaceDetector {
 
-    public boolean isWhitespace(char c) {
-        return (c == ' ' || c == '\t' || c == '\n' || c == '\r');
-    }
+	public boolean isWhitespace(char c) {
+		return (c == ' ' || c == '\t' || c == '\n' || c == '\r');
+	}
 }
