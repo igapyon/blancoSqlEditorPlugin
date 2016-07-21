@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="BlancoSqlEditorPlugin" default="build" basedir=".">
 	<!-- blancoAnt(0.0.7)により自動生成されました。 (2007/05/17) -->
-	<property name="version" value="1.0.0" />
+	<property name="version" value="1.0.1" />
 
 	<property name="product" value="blanco.plugin.sqleditor" />
 	<property name="project.zip" value="${product}_${version}-src.zip" />
