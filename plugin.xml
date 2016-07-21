@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            name="Blanco SQL Editor"
+            extensions="sql"
+            icon="icons/blanco_sqledit.gif"
+            class="blanco.plugin.sqleditor.editors.BlancoSqlEditor"
+            contributorClass="blanco.plugin.sqleditor.editors.BlancoSqlEditorContributor"
+            id="blanco.plugin.sqleditor.editors.BlancoSqlEditor">
+      </editor>
+   </extension>
+
+   <!-- 右クリックメニューによるSQL整形 
+        #TextEditorContext に対してポップアップを追加します。 -->
+   <extension
+         point="org.eclipse.ui.popupMenus">
+      <viewerContribution
+            id="blanco.plugin.sqleditor.popup.BlancoSqlFormatAction"
+            targetID="#TextEditorContext">
+         <action
+               class="blanco.plugin.sqleditor.popup.BlancoSqlFormatAction"
+               id="blanco.plugin.sqleditor.popup.BlancoSqlFormatAction"
+               label="Format as SQL"
+               menubarPath="additional"/>
+      </viewerContribution>
+   </extension>
+</plugin>

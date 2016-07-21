@@ -1,0 +1,19 @@
+0.3.1以降に実施すべき項目
+  【改善項目】
+    1.配色をプリファランス指定(?)で指定可能にすること。
+
+    3.case whenは字下げすべき case と end が同じレベルか？
+      select user_name, sum(case when b is null then 0 else 1 end ) from table1
+
+    4.INNER JOINの字下げ対応
+
+    5.UNION対応
+      UNION直前が カッコ であった場合の対応
+    
+    6.META-INFフォルダを Eclipse 3.0版に含めること。
+
+  【エラー調査】
+    Consoleに Actionアクションがなにがしとエラーが表示されている。
+    一行コメント-- 直後の SELECTキーワードの前に空白が一つ挿入されてします。
+    一行コメントが勝手に改行されると 結構困る場合があります。
+    
