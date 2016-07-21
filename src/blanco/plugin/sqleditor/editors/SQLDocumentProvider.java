@@ -29,6 +29,8 @@ public class SQLDocumentProvider extends FileDocumentProvider {
 		if (document != null) {
 			/**
 			 * Eclipse 3.0との互換性を取るために DefaultPartitioner を利用せざるを得ません。
+			 * 
+			 * TODO you can upgrade class because we drop Eclipse 3.0 support.
 			 */
 			IDocumentPartitioner partitioner = new DefaultPartitioner(new SQLPartitionScanner(),
 					new String[] { SQLPartitionScanner.SQL89, SQLPartitionScanner.SQL92, SQLPartitionScanner.SQL99,
