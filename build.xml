@@ -9,7 +9,7 @@
 	<property name="project.plugin31.jar" value="${product}_${version}-eclipse3.1.jar" />
 	<property name="project.plugin.main.jar" value="blancosqleditorplugin.jar" />
 
-	<property name="eclipse.dir" value="C:/Program Files/eclipse" />
+	<property name="eclipse.dir" value="/home/user1/apps/eclipse.comm/eclipse" />
 
 	<taskdef name="blancoresourcebundle" classname="blanco.resourcebundle.task.BlancoResourceBundleTask">
 		<classpath>
@@ -82,7 +82,7 @@
 	<target name="compile">
 		<delete dir="bin" />
 		<mkdir dir="bin" />
-		<javac srcdir="blanco/main/;src/" destdir="bin" debug="true" source="1.4" target="1.4" fork="true">
+		<javac srcdir="blanco/main/;src/" destdir="bin" debug="true" source="1.6" target="1.6" fork="true">
 			<classpath>
 				<!-- ワイルドカードで一括取り込み -->
 				<fileset dir="lib" includes="*.jar" />
