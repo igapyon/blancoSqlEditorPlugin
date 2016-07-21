@@ -5,8 +5,7 @@
 
 	<property name="product" value="blanco.plugin.sqleditor" />
 	<property name="project.zip" value="${product}_${version}-src.zip" />
-	<property name="project.plugin30.zip" value="${product}_${version}-eclipse3.0.zip" />
-	<property name="project.plugin31.jar" value="${product}_${version}-eclipse3.1.jar" />
+	<property name="project.plugin31.jar" value="${product}_${version}-eclipse.jar" />
 	<property name="project.plugin.main.jar" value="blancosqleditorplugin.jar" />
 
 	<property name="eclipse.dir" value="/home/user1/apps/eclipse.comm/eclipse" />
@@ -28,7 +27,7 @@
 		<mkdir dir="tmp" />
 
 		<zip destfile="${project.zip}">
-			<zipfileset dir="." prefix="blancoSqlEditorPlugin" excludes="${project.plugin30.zip},${project.plugin31.jar},${project.zip},**/*.class" />
+			<zipfileset dir="." prefix="blancoSqlEditorPlugin" excludes="${project.plugin31.jar},${project.zip},**/*.class" />
 		</zip>
 	</target>
 
@@ -46,21 +45,6 @@
 			<!-- プロパティファイルの取り込み -->
 			<zipfileset dir="blanco/main" includes="*.properties" />
 		</jar>
-
-		<!-- Eclipse 3.0用は ZIPファイルとしてアーカイブ -->
-		<delete file="${project.plugin30.zip}" />
-		<zip destfile="${project.plugin30.zip}">
-			<zipfileset dir="icons" prefix="plugins/${product}_${version}/icons" />
-			<zipfileset dir="lib" prefix="plugins/${product}_${version}/lib" includes="blanco*.jar,jxl*.jar" />
-			<zipfileset dir="doc" prefix="plugins/${product}_${version}/doc" />
-			<zipfileset dir="meta" prefix="plugins/${product}_${version}/meta" />
-			<zipfileset file="bin/blancosqleditorplugin.jar" prefix="plugins/${product}_${version}/lib" />
-			<zipfileset dir="bin" prefix="plugins/${product}_${version}/lib" includes="${project.plugin.jar}" />
-			<zipfileset dir="." prefix="plugins/${product}_${version}" includes="plugin.xml" />
-			<zipfileset dir="." prefix="plugins/${product}_${version}" includes="about.html" />
-			<!-- META-INFフォルダを含めてみます -->
-			<zipfileset dir="META-INF" prefix="plugins/${product}_${version}/META-INF" />
-		</zip>
 
 		<!-- Eclipse 3.1用は JARファイルとしてアーカイブ -->
 		<delete file="${project.plugin31.jar}" />
