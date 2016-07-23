@@ -2,8 +2,8 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="blanco/main"/>
+	<classpathentry exported="true" kind="lib" path="lib/blancosqlformatter-2.1.0.jar"/>
 	<classpathentry kind="con" path="org.eclipse.pde.core.requiredPlugins"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="lib" path="lib/blancosqlformatter-0.0.3.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

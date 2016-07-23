@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="BlancoSqlEditorPlugin" default="build" basedir=".">
 	<!-- blancoAnt(0.0.7)により自動生成されました。 (2007/05/17) -->
-	<property name="version" value="1.0.1" />
+	<property name="version" value="1.1.0" />
 
 	<property name="product" value="blanco.plugin.sqleditor" />
 	<property name="project.zip" value="${product}_${version}-src.zip" />
 	<property name="project.plugin31.jar" value="${product}_${version}-eclipse.jar" />
 	<property name="project.plugin.main.jar" value="blancosqleditorplugin.jar" />
 
-	<property name="eclipse.dir" value="/home/user1/apps/eclipse.comm/eclipse" />
+	<property name="eclipse.dir" value="/home/tosiki/apps/eclipse.committers/eclipse" />
 
 	<taskdef name="blancoresourcebundle" classname="blanco.resourcebundle.task.BlancoResourceBundleTask">
 		<classpath>

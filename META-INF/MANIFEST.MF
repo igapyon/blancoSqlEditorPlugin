@@ -1,5 +1,5 @@
 Manifest-Version: 1.0
-Bundle-Version: 1.0.0
+Bundle-Version: 1.1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: BlancoSqlEditor Plug-in
 Bundle-SymbolicName: blanco.plugin.sqleditor; singleton:=true
@@ -17,4 +17,4 @@ Require-Bundle:
  org.eclipse.core.resources
 Eclipse-AutoStart: true
 Bundle-ClassPath: lib/blancosqleditorplugin.jar,
- lib/blancosqlformatter-0.0.3.jar
+ lib/blancosqlformatter-2.1.0.jar
